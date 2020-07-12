@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ASRadioGroup_Example' do
+  pod 'ASRadioGroup', :path => '../'
+
+  target 'ASRadioGroup_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase' , '~> 2.1.4'
+  end
+end
