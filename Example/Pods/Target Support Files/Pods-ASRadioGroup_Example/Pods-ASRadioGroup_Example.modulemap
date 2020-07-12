@@ -1,0 +1,6 @@
+framework module Pods_ASRadioGroup_Example {
+  umbrella header "Pods-ASRadioGroup_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

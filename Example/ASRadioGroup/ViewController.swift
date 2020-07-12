@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import ASRadioGroup
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var asRadioGroup: ASRadioGroupClassic! 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+  
+        asRadioGroup
+            .setDelegate(self)
+            .setRadioButtons([ASRadioButtonClassic("Mobile"), ASRadioButtonClassic("Email")], .horizontal)
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,3 +27,8 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController: ASRadioGroupDelegate {
+    func radioButtonEvent(_ radioGroup: ASRadioGroup, _ button: ASRadioButton) {
+        print("index: \(button.index)")
+    }
+}
