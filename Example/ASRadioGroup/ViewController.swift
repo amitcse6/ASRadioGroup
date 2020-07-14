@@ -17,7 +17,7 @@ class ViewController: UIViewController {
   
         asRadioGroup
             .setDelegate(self)
-            .setRadioButtons([ASRadioButtonClassic("Mobile"), ASRadioButtonClassic("Email")], .horizontal)
+            .setRadioButtons([ASRadioButtonClassic("Mobile"), ASRadioButtonClassic("Email")], .vertical)
     }
 
     override func didReceiveMemoryWarning() {

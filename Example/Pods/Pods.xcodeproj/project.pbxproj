@@ -13,6 +13,7 @@
 		14AD81D52FAD9CF2C065C61FB00C3B4F /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = 4568279DE47DC3AB91598E1317503995 /* UIImage+Diff.m */; };
 		14C511527597E5846AB2627F791C7D8E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 716A9972B9D9103B54DB950893FAF104 /* QuartzCore.framework */; };
 		1CE7F15CCE69F2CC8E0C1EED22888B1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD4ED544B638D07C7D755AF1C27116A /* Foundation.framework */; };
+		2859ACCA24BD9A6A006BDAFE /* ASRButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2859ACC924BD9A6A006BDAFE /* ASRButton.swift */; };
 		288329FA24BAEE300039FE87 /* ASRadioGroupClassic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288329F524BAEE300039FE87 /* ASRadioGroupClassic.swift */; };
 		288329FB24BAEE300039FE87 /* ASRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288329F624BAEE300039FE87 /* ASRadioButton.swift */; };
 		288329FC24BAEE300039FE87 /* ASRadioButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288329F724BAEE300039FE87 /* ASRadioButton+Extension.swift */; };
@@ -82,6 +83,7 @@
 		277B6BE10C665F515606A22FD60C6DCC /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
 		27EAA107AD5F4DF7049589F8DA84FC87 /* ASRadioGroup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ASRadioGroup.debug.xcconfig; sourceTree = "<group>"; };
 		284833D18C244D2B42966B6EE425AA59 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
+		2859ACC924BD9A6A006BDAFE /* ASRButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASRButton.swift; sourceTree = "<group>"; };
 		288329F524BAEE300039FE87 /* ASRadioGroupClassic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASRadioGroupClassic.swift; sourceTree = "<group>"; };
 		288329F624BAEE300039FE87 /* ASRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASRadioButton.swift; sourceTree = "<group>"; };
 		288329F724BAEE300039FE87 /* ASRadioButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ASRadioButton+Extension.swift"; sourceTree = "<group>"; };
@@ -196,11 +198,12 @@
 		288329F424BAEE300039FE87 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				288329F524BAEE300039FE87 /* ASRadioGroupClassic.swift */,
-				288329F624BAEE300039FE87 /* ASRadioButton.swift */,
+				2859ACC924BD9A6A006BDAFE /* ASRButton.swift */,
 				288329F724BAEE300039FE87 /* ASRadioButton+Extension.swift */,
-				288329F824BAEE300039FE87 /* ASRadioGroup.swift */,
+				288329F624BAEE300039FE87 /* ASRadioButton.swift */,
 				288329F924BAEE300039FE87 /* ASRadioButtonClassic.swift */,
+				288329F524BAEE300039FE87 /* ASRadioGroupClassic.swift */,
+				288329F824BAEE300039FE87 /* ASRadioGroup.swift */,
 				288329FF24BAF0DB0039FE87 /* ASRadioGroup+Extension.swift */,
 			);
 			path = Source;
@@ -578,6 +581,7 @@
 				288329FC24BAEE300039FE87 /* ASRadioButton+Extension.swift in Sources */,
 				288329FB24BAEE300039FE87 /* ASRadioButton.swift in Sources */,
 				288329FD24BAEE300039FE87 /* ASRadioGroup.swift in Sources */,
+				2859ACCA24BD9A6A006BDAFE /* ASRButton.swift in Sources */,
 				288329FE24BAEE300039FE87 /* ASRadioButtonClassic.swift in Sources */,
 				28832A0024BAF0DB0039FE87 /* ASRadioGroup+Extension.swift in Sources */,
 				288329FA24BAEE300039FE87 /* ASRadioGroupClassic.swift in Sources */,

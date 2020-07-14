@@ -39,7 +39,7 @@ public class ASRadioButtonClassic: ASRadioButton, ASRadioButtonSubViewDelegate  
         container?.layer.shouldRasterize = true
         //setBordeColor(UIColor(red: 200.0/255.0, green: 200.0/255.0, blue: 200.0/255.0, alpha: 1.0))
         //setBordeWidth(1.0)
-        
+
         myLabel = UILabel()
         container?.addSubview(myLabel.unsafelyUnwrapped)
         myLabel?.backgroundColor = .clear
@@ -47,7 +47,7 @@ public class ASRadioButtonClassic: ASRadioButton, ASRadioButtonSubViewDelegate  
         myLabel?.textAlignment = .left
         myLabel?.text = buttonTitle ?? ""
 
-        myButton = UIImageView()
+        myButton = ASRButton()
         container?.addSubview(myButton.unsafelyUnwrapped)
         myButton?.layer.rasterizationScale = UIScreen.main.scale
         myButton?.layer.shouldRasterize = true

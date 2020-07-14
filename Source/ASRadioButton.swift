@@ -22,9 +22,10 @@ public class ASRadioButton: UIView {
     public var buttonTitle: String?
     public var container: UIView?
     public var myLabel: UILabel?
-    public var myButton: UIImageView?
+    public var myButton: ASRButton?
     public var PADDING: CGFloat = 4
     public var INNER_PADDING: CGFloat = 4
+    public var buttonCenterPadding: CGFloat = 4
     public var iscCornerRadius = true
     public var isSelected = false
     
@@ -34,6 +35,7 @@ public class ASRadioButton: UIView {
             let cornerRadius = (container?.bounds.size.height ?? 0 - PADDING*2) * 0.5
             container?.layer.cornerRadius = cornerRadius
             myButton?.layer.cornerRadius = cornerRadius
+            
         }
     }
     
@@ -43,16 +45,12 @@ public class ASRadioButton: UIView {
     
     func select() {
         isSelected = true
-        hilightSelectedButton()
+        myButton?.select()
     }
     
     func deselect() {
         isSelected = false
-        hilightSelectedButton()
-    }
-    
-    private func hilightSelectedButton() {
-        myButton?.backgroundColor = isSelected ? .red : .gray
+        myButton?.deselect()
     }
 }
 
