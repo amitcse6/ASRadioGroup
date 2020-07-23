@@ -5,7 +5,34 @@
 [![License](https://img.shields.io/cocoapods/l/ASRadioGroup.svg?style=flat)](https://cocoapods.org/pods/ASRadioGroup)
 [![Platform](https://img.shields.io/cocoapods/p/ASRadioGroup.svg?style=flat)](https://cocoapods.org/pods/ASRadioGroup)
 
+Screenshots
+---------
+![ASRadioGroup Screenshots](asradiogroup_screenshot.gif)
+
 ## Example
+
+```swift
+import ASRadioGroup
+
+class ViewController: UIViewController {
+    @IBOutlet weak var asRadioGroup: ASRadioGroupClassic! 
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+  
+        asRadioGroup
+            .setDelegate(self)
+            .setRadioButtons([ASRadioButtonClassic("Mobile"), ASRadioButtonClassic("Email")], .vertical)
+    }
+}
+
+extension ViewController: ASRadioGroupDelegate {
+    func radioButtonEvent(_ radioGroup: ASRadioGroup, _ button: ASRadioButton) {
+        print("index: \(button.index)")
+    }
+}
+
+```
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
