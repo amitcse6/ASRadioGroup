@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public protocol ASRadioButtonSubViewDelegate {
 }
@@ -26,6 +27,7 @@ public class ASRadioButton: UIView {
     public var PADDING: CGFloat = 4
     public var INNER_PADDING: CGFloat = 4
     public var buttonCenterPadding: CGFloat = 4
+    public var RADIO_PADDING: CGFloat = 0
     public var iscCornerRadius = true
     public var isSelected = false
     
@@ -64,6 +66,31 @@ extension ASRadioButton {
     @discardableResult
     public func setBordeWidth(_ borderWidth: CGFloat) -> ASRadioButton {
         container?.layer.borderWidth = borderWidth
+        return self
+    }
+    
+    @discardableResult
+    public func setRadioPadding(_ radioPadding: CGFloat) -> ASRadioButton {
+        RADIO_PADDING = radioPadding
+        setupConstraints()
+        return self
+    }
+    
+    @discardableResult
+    public func setImageColor(_ normal: UIColor, _ selected: UIColor) -> ASRadioButton {
+        myButton?.setImageColor(normal, selected)
+        return self
+    }
+    
+    @discardableResult
+    public func setDotBackColor(_ normal: UIColor, _ selected: UIColor) -> ASRadioButton {
+        myButton?.setDotBackColor(normal, selected)
+        return self
+    }
+    
+    @discardableResult
+    public func setDotColor(_ normal: UIColor, _ selected: UIColor) -> ASRadioButton {
+        myButton?.setDotColor(normal, selected)
         return self
     }
 }

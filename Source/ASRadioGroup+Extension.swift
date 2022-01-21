@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 extension ASRadioGroup {
     public func setupConstraints() {
@@ -18,10 +18,10 @@ extension ASRadioGroup {
             container?.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -PADDING).isActive = true
             
             groupLabel?.translatesAutoresizingMaskIntoConstraints = false
-            groupLabel?.topAnchor.constraint(equalTo: container.unsafelyUnwrapped.topAnchor, constant: PADDING).isActive = true
+            groupLabel?.topAnchor.constraint(equalTo: container.unsafelyUnwrapped.topAnchor, constant: titleHeight == 0 ? 0 : PADDING).isActive = true
             groupLabel?.leftAnchor.constraint(equalTo: container.unsafelyUnwrapped.leftAnchor, constant: PADDING).isActive = true
             groupLabel?.rightAnchor.constraint(equalTo: container.unsafelyUnwrapped.rightAnchor, constant: -PADDING).isActive = true
-            groupLabel?.heightAnchor.constraint(equalToConstant: 15).isActive = true
+            groupLabel?.heightAnchor.constraint(equalToConstant: titleHeight).isActive = true
             
             buttonContainer?.translatesAutoresizingMaskIntoConstraints = false
             buttonContainer?.topAnchor.constraint(equalTo: groupLabel.unsafelyUnwrapped.bottomAnchor, constant: PADDING).isActive = true

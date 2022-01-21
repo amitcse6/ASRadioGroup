@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public class ASRadioButtonClassic: ASRadioButton, ASRadioButtonSubViewDelegate  {
     public override init(frame: CGRect) {
@@ -50,6 +51,7 @@ public class ASRadioButtonClassic: ASRadioButton, ASRadioButtonSubViewDelegate  
         myButton = ASRButton()
         container?.addSubview(myButton.unsafelyUnwrapped)
         myButton?.layer.rasterizationScale = UIScreen.main.scale
+        myButton?.backgroundColor = .clear
         myButton?.layer.shouldRasterize = true
         myButton?.contentMode = .scaleAspectFill
  
@@ -57,9 +59,5 @@ public class ASRadioButtonClassic: ASRadioButton, ASRadioButtonSubViewDelegate  
         let tapGestureRecognizer = ASRadioButtonGestureRecognizer(target: self, action: #selector(radioButtonEvent(_:))) 
         tapGestureRecognizer.firstObject = nil
         self.addGestureRecognizer(tapGestureRecognizer)
-    }
-    
-    public func setupConstraints() {
-        super.setupConstraintsWithButtonLeft()
     }
 }

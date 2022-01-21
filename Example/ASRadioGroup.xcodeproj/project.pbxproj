@@ -15,6 +15,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		6A33814F325813B79CC142AD /* Pods_ASRadioGroup_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FE34EEE83996369E632EB84 /* Pods_ASRadioGroup_Tests.framework */; };
+		890EF059279B13F20088991B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890EF058279B13F10088991B /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		607FACE51AFB9204008FA782 /* ASRadioGroup_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ASRadioGroup_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		890EF058279B13F10088991B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		97491E56862A4E36533BE696 /* Pods-ASRadioGroup_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASRadioGroup_Example.release.xcconfig"; path = "Target Support Files/Pods-ASRadioGroup_Example/Pods-ASRadioGroup_Example.release.xcconfig"; sourceTree = "<group>"; };
 		ADD7687A26FD3C3307EF38C4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CC4DE249E8203782B2399C0B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		607FACD21AFB9204008FA782 /* Example for ASRadioGroup */ = {
 			isa = PBXGroup;
 			children = (
+				890EF058279B13F10088991B /* UIColor+Extension.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -350,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				890EF059279B13F20088991B /* UIColor+Extension.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);

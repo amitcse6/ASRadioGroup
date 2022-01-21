@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public class ASRadioGroupClassic: ASRadioGroup, ASRadioSubGroupDelegate {
     public override init(frame: CGRect) {

@@ -17,7 +17,16 @@ class ViewController: UIViewController {
   
         asRadioGroup
             .setDelegate(self)
-            .setRadioButtons([ASRadioButtonClassic("Mobile"), ASRadioButtonClassic("Email")], .vertical)
+            .setRadioButtons([ASRadioButtonClassic("Agree"),ASRadioButtonClassic("Not agree")], .horizontal)
+            .removeTitle()
+            .setTitle("")
+            .setFont(UIFont(name: "Arial", size: 15))
+            .setBordeColor(.clear)
+            .setRadioPadding(0)
+            .setImageColor(.gray, .gray)
+            .setDotBackColor(.white, .white)
+            .setDotColor(UIColor(hexString: "38B6FF"), .gray)
+            .selectButton(1)
     }
 
     override func didReceiveMemoryWarning() {

@@ -9,6 +9,9 @@
 import Foundation
 
 extension ASRadioButton {
+    public func setupConstraints() {
+        setupConstraintsWithButtonLeft()
+    }
     
     public func setupConstraintsWithButtonLeft() {
         container?.translatesAutoresizingMaskIntoConstraints = false
@@ -19,14 +22,14 @@ extension ASRadioButton {
             container?.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -PADDING).isActive = true
             
             myButton?.translatesAutoresizingMaskIntoConstraints = false
-            myButton?.topAnchor.constraint(equalTo: container.unsafelyUnwrapped.topAnchor).isActive = true
-            myButton?.leftAnchor.constraint(equalTo: container.unsafelyUnwrapped.leftAnchor).isActive = true
-            myButton?.bottomAnchor.constraint(equalTo: container.unsafelyUnwrapped.bottomAnchor).isActive = true
+            myButton?.topAnchor.constraint(equalTo: container.unsafelyUnwrapped.topAnchor, constant: RADIO_PADDING).isActive = true
+            myButton?.leftAnchor.constraint(equalTo: container.unsafelyUnwrapped.leftAnchor, constant: RADIO_PADDING).isActive = true
+            myButton?.bottomAnchor.constraint(equalTo: container.unsafelyUnwrapped.bottomAnchor, constant: -RADIO_PADDING).isActive = true
             myButton?.widthAnchor.constraint(equalTo: myButton.unsafelyUnwrapped.heightAnchor).isActive = true
             
             myLabel?.translatesAutoresizingMaskIntoConstraints = false
             myLabel?.topAnchor.constraint(equalTo: container.unsafelyUnwrapped.topAnchor).isActive = true
-            myLabel?.leftAnchor.constraint(equalTo: myButton.unsafelyUnwrapped.rightAnchor, constant: 16).isActive = true
+            myLabel?.leftAnchor.constraint(equalTo: myButton.unsafelyUnwrapped.rightAnchor, constant: 8).isActive = true
             myLabel?.rightAnchor.constraint(equalTo: container.unsafelyUnwrapped.rightAnchor).isActive = true
             myLabel?.bottomAnchor.constraint(equalTo: container.unsafelyUnwrapped.bottomAnchor).isActive = true
         } else {
@@ -48,11 +51,11 @@ extension ASRadioButton {
             myLabel?.bottomAnchor.constraint(equalTo: container.unsafelyUnwrapped.bottomAnchor).isActive = true
             
             myButton?.translatesAutoresizingMaskIntoConstraints = false
-            myButton?.topAnchor.constraint(equalTo: container.unsafelyUnwrapped.topAnchor).isActive = true
-            myButton?.leftAnchor.constraint(equalTo: myLabel.unsafelyUnwrapped.rightAnchor).isActive = true
-            myButton?.rightAnchor.constraint(equalTo: container.unsafelyUnwrapped.rightAnchor).isActive = true
-            myButton?.bottomAnchor.constraint(equalTo: container.unsafelyUnwrapped.bottomAnchor).isActive = true
-            myButton?.widthAnchor.constraint(equalTo: myButton.unsafelyUnwrapped.heightAnchor).isActive = true
+            myButton?.topAnchor.constraint(equalTo: container.unsafelyUnwrapped.topAnchor, constant: RADIO_PADDING).isActive = true
+            myButton?.leftAnchor.constraint(equalTo: myLabel.unsafelyUnwrapped.rightAnchor, constant: RADIO_PADDING).isActive = true
+            myButton?.rightAnchor.constraint(equalTo: container.unsafelyUnwrapped.rightAnchor, constant: -RADIO_PADDING).isActive = true
+            myButton?.bottomAnchor.constraint(equalTo: container.unsafelyUnwrapped.bottomAnchor, constant: -RADIO_PADDING).isActive = true
+            myButton?.widthAnchor.constraint(equalTo: myButton.unsafelyUnwrapped.heightAnchor, constant: RADIO_PADDING).isActive = true
         } else {
             // Fallback on earlier versions
         }
