@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ASRadioGroup'
-  s.version          = '0.1.4'
+  s.version          = '1.0.1'
   s.summary          = 'ASRadioGroup for Radio Option Selection'
 
 # This description is used to generate tags and improve search results.

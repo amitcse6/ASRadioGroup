@@ -12,12 +12,13 @@ import ASRadioGroup
 class ViewController: UIViewController {
     @IBOutlet weak var asRadioGroup: ASRadioGroupClassic! 
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-  
+        
         asRadioGroup
             .setDelegate(self)
-            .setRadioButtons([ASRadioButtonClassic("Agree"),ASRadioButtonClassic("Not agree")], .horizontal)
+            .setRadioButtons([ASRadioButtonClassic(""),ASRadioButtonClassic("")], .horizontal)
             .removeTitle()
             .setTitle("")
             .setFont(UIFont(name: "Arial", size: 15))
@@ -28,12 +29,19 @@ class ViewController: UIViewController {
             .setDotColor(UIColor(hexString: "38B6FF"), .gray)
             .selectButton(1)
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        ["Agree", "Not agree"].enumerated().forEach({ (index, item) in
+            asRadioGroup.getButtons()?[index].setText(item)
+        })
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }
 
 extension ViewController: ASRadioGroupDelegate {
