@@ -27,7 +27,7 @@ class ViewController: UIViewController {
             .setImageColor(.gray, .gray)
             .setDotBackColor(.white, .white)
             .setDotColor(UIColor(hexString: "38B6FF"), .gray)
-            .selectButton(1)
+            .setEnable(true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,5 +47,9 @@ class ViewController: UIViewController {
 extension ViewController: ASRadioGroupDelegate {
     func radioButtonEvent(_ radioGroup: ASRadioGroup, _ button: ASRadioButton) {
         print("index: \(button.index)")
+    }
+    
+    func radioButtonEvent(_ radioGroup: ASRadioGroup, _ button: ASRadioButton, _ isEnable: Bool) {
+        print("\(isEnable)")
     }
 }

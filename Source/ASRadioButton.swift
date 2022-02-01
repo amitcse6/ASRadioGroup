@@ -14,6 +14,7 @@ public protocol ASRadioButtonSubViewDelegate {
 
 public protocol ASRadioButtonDelegate {
     func radioButtonEvent(_ button: ASRadioButton)
+    func radioButtonEvent(_ button: ASRadioButton, _ isEnable: Bool)
 }
 
 public class ASRadioButton: UIView {
@@ -30,6 +31,7 @@ public class ASRadioButton: UIView {
     public var RADIO_PADDING: CGFloat = 0
     public var iscCornerRadius = true
     public var isSelected = false
+    public var isEnable = true
     
     public override func layoutSubviews() {
         super.layoutSubviews()
@@ -42,7 +44,10 @@ public class ASRadioButton: UIView {
     }
     
     @objc func radioButtonEvent(_ sender: ASRadioButtonGestureRecognizer) {
-        delegate?.radioButtonEvent(self)
+        if isEnable {
+            delegate?.radioButtonEvent(self)
+        }
+        delegate?.radioButtonEvent(self, isEnable)
     }
     
     func select() {
@@ -91,6 +96,12 @@ extension ASRadioButton {
     @discardableResult
     public func setDotColor(_ normal: UIColor, _ selected: UIColor) -> ASRadioButton {
         myButton?.setDotColor(normal, selected)
+        return self
+    }
+    
+    @discardableResult
+    public func setEnable(_ isEnable: Bool) -> ASRadioButton {
+        self.isEnable = isEnable
         return self
     }
     
