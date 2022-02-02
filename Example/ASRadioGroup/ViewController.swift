@@ -46,7 +46,7 @@ class ViewController: UIViewController {
 
 extension ViewController: ASRadioGroupDelegate {
     func radioButtonEvent(_ radioGroup: ASRadioGroup, _ button: ASRadioButton, _ isEnable: Bool) {
-        print("index: \(button.index) isEnable: \(isEnable)")
+        print("index: \(button.index) isEnable: \(isEnable) asRadioGroup: \(asRadioGroup.isEnable)")
         if !isEnable {
             radioGroup.setEnable(true).setDotColor(UIColor(hexString: "38B6FF"), .gray, button, true)
         }

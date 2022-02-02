@@ -33,7 +33,7 @@ public class ASRadioGroup: UIView {
     public var titleHeight: CGFloat = 15
     public var BUTTON_SPACE: CGFloat = 4
     public var iscCornerRadius = false
-    
+    public var isEnable: Bool = true
     
     public override func layoutSubviews() {
         super.layoutSubviews()
@@ -129,6 +129,7 @@ extension ASRadioGroup {
     
     @discardableResult
     public func setEnable(_ isEnable: Bool) -> ASRadioGroup {
+        self.isEnable = isEnable
         if let radioButtons = radioButtons {
             for (_, asRadioButton) in radioButtons.enumerated() {
                 asRadioButton.setEnable(isEnable)
