@@ -90,8 +90,8 @@ extension ASRadioButton {
     }
     
     @discardableResult
-    public func setDotColor(_ normal: UIColor, _ selected: UIColor) -> ASRadioButton {
-        myButton?.setDotColor(normal, selected)
+    public func setDotColor(_ normal: UIColor, _ selected: UIColor, _ isSelected: Bool? = nil) -> ASRadioButton {
+        myButton?.setDotColor(normal, selected, isSelected ?? false)
         return self
     }
     

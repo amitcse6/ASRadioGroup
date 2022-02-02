@@ -128,8 +128,8 @@ public class ASRButton: UIView {
         highlightDotBackColor(false)
     }
     
-    public func setDotColor(_ normal: UIColor, _ isSelected: UIColor) {
-        dotContainer?.setDotColor(normal, isSelected)
+    public func setDotColor(_ normal: UIColor, _ selected: UIColor, _ isSelected: Bool) {
+        dotContainer?.setDotColor(normal, selected, isSelected)
     }
 }
 
@@ -200,10 +200,10 @@ public class ASRInnerButton: UIView {
         dotContainer?.backgroundColor = isSelected ? dotColor : dotColorSelected
     }
     
-    public func setDotColor(_ normal: UIColor, _ isSelected: UIColor) {
+    public func setDotColor(_ normal: UIColor, _ selected: UIColor, _ isSelected: Bool) {
         dotColor = normal
-        dotColorSelected = isSelected
-        hilightSelectedButton(false)
+        dotColorSelected = selected
+        hilightSelectedButton(isSelected)
     }
 }
 

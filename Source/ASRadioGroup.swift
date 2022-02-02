@@ -112,10 +112,16 @@ extension ASRadioGroup {
     }
     
     @discardableResult
-    public func setDotColor(_ normal: UIColor, _ selected: UIColor) -> ASRadioGroup {
+    public func setDotColor(_ normal: UIColor, _ selected: UIColor, _ button: ASRadioButton? = nil, _ isSelected: Bool? = nil) -> ASRadioGroup {
         if let radioButtons = radioButtons {
             for (_, asRadioButton) in radioButtons.enumerated() {
-                asRadioButton.setDotColor(normal, selected)
+                if let button = button, button === asRadioButton, let isSelected = isSelected {
+                    asRadioButton.setDotColor(normal, selected, isSelected)
+                } else if button != nil {
+                    asRadioButton.setDotColor(normal, selected, false)
+                }else{
+                    asRadioButton.setDotColor(normal, selected, isSelected ?? false)
+                }
             }
         }
         return self

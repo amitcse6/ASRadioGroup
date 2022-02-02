@@ -26,8 +26,8 @@ class ViewController: UIViewController {
             .setRadioPadding(0)
             .setImageColor(.gray, .gray)
             .setDotBackColor(.white, .white)
-            .setDotColor(UIColor(hexString: "38B6FF"), .gray)
-            .setEnable(true)
+            .setDotColor(.clear, .clear)
+            .setEnable(false)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,5 +47,8 @@ class ViewController: UIViewController {
 extension ViewController: ASRadioGroupDelegate {
     func radioButtonEvent(_ radioGroup: ASRadioGroup, _ button: ASRadioButton, _ isEnable: Bool) {
         print("index: \(button.index) isEnable: \(isEnable)")
+        if !isEnable {
+            radioGroup.setEnable(true).setDotColor(UIColor(hexString: "38B6FF"), .gray, button, true)
+        }
     }
 }
