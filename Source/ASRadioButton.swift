@@ -13,7 +13,6 @@ public protocol ASRadioButtonSubViewDelegate {
 }
 
 public protocol ASRadioButtonDelegate {
-    func radioButtonEvent(_ button: ASRadioButton)
     func radioButtonEvent(_ button: ASRadioButton, _ isEnable: Bool)
 }
 
@@ -44,9 +43,6 @@ public class ASRadioButton: UIView {
     }
     
     @objc func radioButtonEvent(_ sender: ASRadioButtonGestureRecognizer) {
-        if isEnable {
-            delegate?.radioButtonEvent(self)
-        }
         delegate?.radioButtonEvent(self, isEnable)
     }
     

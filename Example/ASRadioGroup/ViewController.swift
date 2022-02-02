@@ -45,11 +45,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: ASRadioGroupDelegate {
-    func radioButtonEvent(_ radioGroup: ASRadioGroup, _ button: ASRadioButton) {
-        print("index: \(button.index)")
-    }
-    
     func radioButtonEvent(_ radioGroup: ASRadioGroup, _ button: ASRadioButton, _ isEnable: Bool) {
-        print("\(isEnable)")
+        print("index: \(button.index) isEnable: \(isEnable)")
     }
 }

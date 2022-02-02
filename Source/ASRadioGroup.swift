@@ -15,8 +15,7 @@ public enum ASRadioGroupAlignment {
 }
 
 @objc public protocol ASRadioGroupDelegate {
-    func radioButtonEvent(_ radioGroup: ASRadioGroup, _ button: ASRadioButton)
-    @objc optional func radioButtonEvent(_ radioGroup: ASRadioGroup, _ button: ASRadioButton, _ isEnable: Bool)
+    func radioButtonEvent(_ radioGroup: ASRadioGroup, _ button: ASRadioButton, _ isEnable: Bool)
 }
 
 public protocol ASRadioSubGroupDelegate {
@@ -71,13 +70,10 @@ public class ASRadioGroup: UIView {
 
 extension ASRadioGroup: ASRadioButtonDelegate {
     public func radioButtonEvent(_ button: ASRadioButton, _ isEnable: Bool) {
-        selectButton(button.index)
-        delegate?.radioButtonEvent?(self, button, isEnable)
-    }
-    
-    public func radioButtonEvent(_ button: ASRadioButton) {
-        selectButton(button.index)
-        delegate?.radioButtonEvent(self, button)
+        if isEnable {
+            selectButton(button.index)
+        }
+        delegate?.radioButtonEvent(self, button, isEnable)
     }
 }
 
