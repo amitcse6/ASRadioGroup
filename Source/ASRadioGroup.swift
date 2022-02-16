@@ -139,6 +139,18 @@ extension ASRadioGroup {
     }
     
     @discardableResult
+    public func setTextColor(_ color: UIColor?) -> ASRadioGroup {
+        if let color = color {
+            if let radioButtons = radioButtons {
+                for (_, asRadioButton) in radioButtons.enumerated() {
+                    asRadioButton.setTextColor(color)
+                }
+            }
+        }
+        return self
+    }
+    
+    @discardableResult
     public func setRadioButtons(_ radioButtons: [ASRadioButton], _ layoutAlignment: ASRadioGroupAlignment) -> ASRadioGroup {
         self.radioButtons = radioButtons
         self.layoutAlignment = layoutAlignment

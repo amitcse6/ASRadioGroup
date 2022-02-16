@@ -28,6 +28,7 @@ class ViewController: UIViewController {
             .setDotBackColor(.white, .white)
             .setDotColor(.clear, .clear)
             .setEnable(false)
+            .setTextColor(.green)
     }
     
     override func viewWillAppear(_ animated: Bool) {

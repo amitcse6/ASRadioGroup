@@ -108,6 +108,14 @@ extension ASRadioButton {
         }
         return self
     }
+    
+    @discardableResult
+    public func setTextColor(_ color: UIColor?) -> ASRadioButton {
+        if let color = color {
+            myLabel?.textColor = color
+        }
+        return self
+    }
 }
 
 public class ASRadioButtonGestureRecognizer: UITapGestureRecognizer {
