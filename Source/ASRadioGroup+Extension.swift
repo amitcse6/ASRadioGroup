@@ -41,10 +41,16 @@ extension ASRadioGroup {
                         asRadioButton.leftAnchor.constraint(equalTo: radioButtons.unsafelyUnwrapped[index-1].rightAnchor).isActive = true
                     }
                     if index == radioButtons.unsafelyUnwrapped.count - 1 {
-                        asRadioButton.rightAnchor.constraint(equalTo: buttonContainer.unsafelyUnwrapped.rightAnchor).isActive = true
+                        if isWidthFit {
+                            asRadioButton.rightAnchor.constraint(equalTo: buttonContainer.unsafelyUnwrapped.rightAnchor, constant: 0).isActive = true
+                        }else {
+                            asRadioButton.rightAnchor.constraint(lessThanOrEqualTo: buttonContainer.unsafelyUnwrapped.rightAnchor, constant: 0).isActive = true
+                        }
                     }
                     asRadioButton.bottomAnchor.constraint(equalTo: buttonContainer.unsafelyUnwrapped.bottomAnchor).isActive = true
-                    asRadioButton.widthAnchor.constraint(equalTo: radioButtons.unsafelyUnwrapped[0].widthAnchor).isActive = true
+                    if isWidthFit {
+                        asRadioButton.widthAnchor.constraint(equalTo: radioButtons.unsafelyUnwrapped[0].widthAnchor).isActive = true
+                    }
                 }else {
                     if index == 0 {
                         asRadioButton.topAnchor.constraint(equalTo: buttonContainer.unsafelyUnwrapped.topAnchor).isActive = true

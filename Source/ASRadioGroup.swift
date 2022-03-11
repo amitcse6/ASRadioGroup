@@ -34,6 +34,7 @@ public class ASRadioGroup: UIView {
     public var BUTTON_SPACE: CGFloat = 4
     public var iscCornerRadius = false
     public var isEnable: Bool = true
+    public var isWidthFit: Bool = true
     
     public override func layoutSubviews() {
         super.layoutSubviews()
@@ -147,6 +148,13 @@ extension ASRadioGroup {
                 }
             }
         }
+        return self
+    }
+    
+    @discardableResult
+    public func setWidthToFit(_ isWidthFit: Bool) -> ASRadioGroup {
+        self.isWidthFit = isWidthFit
+        setupConstraints()
         return self
     }
     

@@ -27,16 +27,27 @@
                                     <constraint firstAttribute="height" constant="50" id="UqG-D1-6iw"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7cE-11-b1C" customClass="ASRadioGroupClassic" customModule="ASRadioGroup">
+                                <rect key="frame" x="16" y="78" width="343" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6e6-qs-9ib"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
+                            <constraint firstItem="7cE-11-b1C" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="23s-Pq-zFm"/>
+                            <constraint firstItem="7cE-11-b1C" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="9Fp-ic-ghh"/>
                             <constraint firstItem="TDm-Ff-xib" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="HvZ-rp-U5Y"/>
+                            <constraint firstItem="7cE-11-b1C" firstAttribute="top" secondItem="TDm-Ff-xib" secondAttribute="bottom" constant="8" symbolic="YES" id="TKV-Ht-AC8"/>
                             <constraint firstItem="TDm-Ff-xib" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="jaH-XQ-e93"/>
                             <constraint firstItem="TDm-Ff-xib" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="rAe-in-9HN"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="asRadioGroup" destination="TDm-Ff-xib" id="zoz-lF-zmZ"/>
+                        <outlet property="asRadioGroup2" destination="7cE-11-b1C" id="e1y-zk-EgC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

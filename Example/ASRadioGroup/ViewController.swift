@@ -10,14 +10,15 @@ import UIKit
 import ASRadioGroup
 
 class ViewController: UIViewController {
-    @IBOutlet weak var asRadioGroup: ASRadioGroupClassic! 
-    
+    @IBOutlet weak var asRadioGroup: ASRadioGroupClassic!
+    @IBOutlet weak var asRadioGroup2: ASRadioGroupClassic!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         asRadioGroup
             .setDelegate(self)
+            .setWidthToFit(true)
             .setRadioButtons([ASRadioButtonClassic(""),ASRadioButtonClassic("")], .horizontal)
             .removeTitle()
             .setTitle("")
@@ -29,12 +30,33 @@ class ViewController: UIViewController {
             .setDotColor(.clear, .clear)
             .setEnable(false)
             .setTextColor(.green)
+            
+        
+        asRadioGroup2
+            .setDelegate(self)
+            .setWidthToFit(false)
+            .setRadioButtons([ASRadioButtonClassic(""),ASRadioButtonClassic("")], .horizontal)
+            .removeTitle()
+            .setTitle("")
+            .setFont(UIFont(name: "Arial", size: 15))
+            .setBordeColor(.clear)
+            .setRadioPadding(0)
+            .setImageColor(.gray, .gray)
+            .setDotBackColor(.white, .white)
+            .setDotColor(.clear, .clear)
+            .setEnable(false)
+            .setTextColor(.green)
+            
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         ["Agree", "Not agree"].enumerated().forEach({ (index, item) in
             asRadioGroup.getButtons()?[index].setText(item)
+        })
+        
+        ["Agree 1", "Not agree 1"].enumerated().forEach({ (index, item) in
+            asRadioGroup2.getButtons()?[index].setText(item)
         })
     }
     
