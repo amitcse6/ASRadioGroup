@@ -9,16 +9,16 @@
 import Foundation
 import UIKit
 
-public protocol ASRadioButtonSubViewDelegate {
+public protocol ASRadioButtonSubViewDelegate: AnyObject {
 }
 
-public protocol ASRadioButtonDelegate {
+public protocol ASRadioButtonDelegate: AnyObject {
     func radioButtonEvent(_ button: ASRadioButton, _ isEnable: Bool)
 }
 
 public class ASRadioButton: UIView {
-    public var delegate: ASRadioButtonDelegate?
-    public var subViewDelegate: ASRadioButtonSubViewDelegate?
+    public weak var delegate: ASRadioButtonDelegate?
+    public weak var subViewDelegate: ASRadioButtonSubViewDelegate?
     public var index: Int = 0
     public var buttonTitle: String?
     public var container: UIView?

@@ -14,16 +14,16 @@ public enum ASRadioGroupAlignment {
     case horizontal
 }
 
-@objc public protocol ASRadioGroupDelegate {
+@objc public protocol ASRadioGroupDelegate: AnyObject {
     func radioButtonEvent(_ radioGroup: ASRadioGroup, _ button: ASRadioButton, _ isEnable: Bool)
 }
 
-public protocol ASRadioSubGroupDelegate {
+public protocol ASRadioSubGroupDelegate: AnyObject {
 }
 
 public class ASRadioGroup: UIView {
-    public var delegate: ASRadioGroupDelegate?
-    public var subViewDelegate: ASRadioSubGroupDelegate?
+    public weak var delegate: ASRadioGroupDelegate?
+    public weak var subViewDelegate: ASRadioSubGroupDelegate?
     public var container: UIView?
     public var groupLabel: UILabel?
     public var buttonContainer: UIView?
